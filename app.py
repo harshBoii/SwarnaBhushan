@@ -18,7 +18,7 @@ jwt=JWTManager(app)
 @app.route('/')
 def home():
         with app.app_context():
-        db.create_all()
+                db.create_all()
         # Only add sample data if the table is empty
         if Jewellery.query.count() == 0:
             sample_data = [
