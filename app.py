@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from Model import db,Jewellery,Customer,CartItem
 from flask_jwt_extended import JWTManager ,create_access_token,jwt_required,get_jwt_identity
+import os
 
 
 app=Flask(__name__)
@@ -232,5 +233,9 @@ def removeitem():
 # @app.route('/api/admin')
 # def CreateItem()
 
-app.run(debug=True)
+port = int(os.environ.get('PORT', 5000))
+
+app.run(debug=True,host='0.0.0.0',
+        debug=True,
+        use_reloader=False )
 #   
