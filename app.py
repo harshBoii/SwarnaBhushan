@@ -102,7 +102,7 @@ def home():
                 db.session.add(new_item)
             db.session.commit()
 
-    return 'Hii'
+        return 'Hii'
 
 @app.route('/api/cards', methods=['GET'])
 def getcards():
@@ -229,8 +229,8 @@ def removeitem():
     else:
         return jsonify({"message":"User not found"}),404
 
-@app.route('/api/admin')
-def CreateItem()
+# @app.route('/api/admin')
+# def CreateItem()
 
 app.run(debug=True)
 #   
