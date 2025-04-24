@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['JWT_SECRET_KEY'] = 'SwarnAbhusan'
 db.init_app(app)
-CORS(app,origins=['http://localhost:5173'],supports_credentials=True,max_age=10800)
+CORS(app,origins=['https://swarnabhusan.netlify.app'],supports_credentials=True,max_age=10800)
 
 jwt=JWTManager(app)
 
