@@ -229,5 +229,8 @@ def removeitem():
     else:
         return jsonify({"message":"User not found"}),404
 
+@app.route('/api/admin')
+def CreateItem()
+
 app.run(debug=True)
 #   
