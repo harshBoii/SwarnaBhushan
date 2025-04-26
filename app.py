@@ -122,6 +122,10 @@ def signup():
     Address=data.get("address")
     Phone=data.get("number")
 
+    if not Email :
+        return jsonify(message="Enter valid details",ok=False),400
+
+
     if Customer.query.filter_by(email=Email).first():
         return jsonify({"message":"User already exists"}),400
     else:
