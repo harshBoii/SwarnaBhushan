@@ -143,6 +143,9 @@ def login():
     email=data.get("email")
     password=data.get("password")
 
+    if not email :
+        return jsonify(message="Enter valid details",ok=False),400
+
     user=Customer.query.filter_by(email=email).first()
 
 
